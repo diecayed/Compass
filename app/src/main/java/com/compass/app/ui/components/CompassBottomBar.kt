@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.compass.app.navigation.CompassRoute
+import com.compass.app.navigation.SettingsRoute
 import com.compass.app.navigation.TopLevelRoute
 import com.compass.app.utils.HapticEvent
 import com.compass.app.utils.HapticFeedbackPlayer
@@ -143,9 +144,10 @@ fun CompassBottomBar(
         label = "barHighlight",
     )
     val view = LocalView.current
-    // on the compass the bar stays put when auto-rotate is off, the level keeps turning
+    // The bar only turns on the level. On the compass it also stays put while auto-rotate is off.
     val onCompass = currentRoute::class == CompassRoute::class
-    val turn = rememberScreenTurn(frozen = onCompass && !rememberAutoRotateEnabled())
+    val onSettings = currentRoute::class == SettingsRoute::class
+    val turn = rememberScreenTurn(frozen = onSettings || (onCompass && !rememberAutoRotateEnabled()))
 
     Box(
         modifier = modifier
