@@ -3,6 +3,10 @@
 A free, open-source compass with a bubble level and a ruler for Android. No ads, no in-app
 purchases and no tracking. Built with Kotlin and Jetpack Compose.
 
+## Download
+
+Get the latest APK from the [Releases page](https://github.com/diecayed/Compass/releases/latest) and open it on your phone. You may need to allow installing apps from your browser or file manager.
+
 ## Features
 
 **Compass**
