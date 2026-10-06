@@ -105,4 +105,6 @@
     <string name="made_by">制作</string>
     <string name="support_title">サポート (W.I.P.)</string>
     <string name="support_desc">Compassの開発を支援する</string>
+    <string name="copy_coordinates">座標をコピー</string>
+    <string name="coordinates_copied">座標をコピーしました</string>
 </resources>

@@ -123,4 +123,6 @@
     <string name="made_by">Made by</string>
     <string name="support_title">Support (W.I.P.)</string>
     <string name="support_desc">Support the development of Compass</string>
+    <string name="copy_coordinates">Copy coordinates</string>
+    <string name="coordinates_copied">Coordinates copied</string>
 </resources>

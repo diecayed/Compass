@@ -98,4 +98,6 @@
     <string name="made_by">Entwickelt von</string>
     <string name="support_title">Unterstützen (W.I.P.)</string>
     <string name="support_desc">Die Entwicklung von Compass unterstützen</string>
+    <string name="copy_coordinates">Koordinaten kopieren</string>
+    <string name="coordinates_copied">Koordinaten kopiert</string>
 </resources>

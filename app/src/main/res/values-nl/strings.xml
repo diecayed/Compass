@@ -97,4 +97,6 @@
     <string name="made_by">Gemaakt door</string>
     <string name="support_title">Steunen (W.I.P.)</string>
     <string name="support_desc">Steun de ontwikkeling van Compass</string>
+    <string name="copy_coordinates">Coördinaten kopiëren</string>
+    <string name="coordinates_copied">Coördinaten gekopieerd</string>
 </resources>

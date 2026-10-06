@@ -98,4 +98,6 @@
     <string name="made_by">Yapan</string>
     <string name="support_title">Destek ol (W.I.P.)</string>
     <string name="support_desc">Compass\'ın geliştirilmesine destek ol</string>
+    <string name="copy_coordinates">Koordinatları kopyala</string>
+    <string name="coordinates_copied">Koordinatlar kopyalandı</string>
 </resources>

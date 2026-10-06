@@ -2,6 +2,9 @@
 
 package com.compass.app.features.compass
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.location.Location
 import android.os.Build
 import androidx.compose.runtime.Composable
@@ -65,6 +68,18 @@ fun formatCoordinates(
 ): String =
     "${dms(location.latitude, cardinalLetters[0], cardinalLetters[2], hemisphereFirst)}  " +
             dms(location.longitude, cardinalLetters[1], cardinalLetters[3], hemisphereFirst)
+
+/** Puts [coordinates] on the clipboard. Returns false if the system refuses. */
+fun copyCoordinates(context: Context, coordinates: String): Boolean {
+    val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
+        ?: return false
+    return try {
+        clipboard.setPrimaryClip(ClipData.newPlainText("coordinates", coordinates))
+        true
+    } catch (_: SecurityException) {
+        false
+    }
+}
 
 private fun dms(value: Double, positive: String, negative: String, hemisphereFirst: Boolean): String {
     val hemisphere = if (value >= 0) positive else negative

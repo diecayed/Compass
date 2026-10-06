@@ -9,6 +9,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.hardware.SensorManager
+import android.os.Build
+import android.widget.Toast
 import android.location.LocationManager
 import android.net.Uri
 import android.provider.Settings
@@ -19,7 +21,9 @@ import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -54,6 +58,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
@@ -82,6 +87,8 @@ import com.compass.app.ui.components.ScreenTurn
 import com.compass.app.ui.components.rememberAutoRotateEnabled
 import com.compass.app.ui.components.rememberScreenTurn
 import com.compass.app.utils.Azimuth
+import com.compass.app.utils.HapticEvent
+import com.compass.app.utils.HapticFeedbackPlayer
 import com.compass.app.utils.HapticStrength
 import com.compass.app.utils.KeepScreenOn
 import kotlin.math.roundToInt
@@ -178,6 +185,7 @@ fun CompassScreen(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun Compass(
     modifier: Modifier = Modifier,
@@ -188,6 +196,7 @@ fun Compass(
     magneticStrength: Float,
     hapticStrength: HapticStrength,
 ) {
+    val view = LocalView.current
     val azimuthState by viewModel.azimuth.collectAsStateWithLifecycle()
     val strength by viewModel.strength.collectAsStateWithLifecycle()
 
@@ -265,15 +274,31 @@ fun Compass(
             // coordinates and elevation, right under the heading
             val currentLocation = location
             if (currentLocation != null) {
+                val coordinates = formatCoordinates(currentLocation, cardinalNames, hemisphereFirst)
+                val copyLabel = stringResource(R.string.copy_coordinates)
+                val copiedMessage = stringResource(R.string.coordinates_copied)
                 Text(
-                    text = formatCoordinates(
-                        currentLocation,
-                        cardinalNames,
-                        hemisphereFirst
-                    ),
+                    text = coordinates,
                     color = dial.ink,
                     style = MaterialTheme.typography.bodyLarge,
-                    modifier = Modifier.padding(top = 4.dp)
+                    modifier = Modifier
+                        .padding(top = 4.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .combinedClickable(
+                            onClick = {},
+                            onLongClickLabel = copyLabel,
+                            hapticFeedbackEnabled = false,
+                            onLongClick = {
+                                if (copyCoordinates(context, coordinates)) {
+                                    HapticFeedbackPlayer.play(view, hapticStrength, HapticEvent.SUCCESS)
+                                    // Android 13 and up shows its own "copied" message
+                                    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+                                        Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
+                                    }
+                                }
+                            },
+                        )
+                        .padding(horizontal = 8.dp, vertical = 2.dp)
                 )
                 formatElevation(currentLocation)?.let { elevation ->
                     Text(
