@@ -1,0 +1,108 @@
+<!-- SPDX-License-Identifier: GPL-3.0-or-later-->
+
+<resources>
+    <string name="app_name">コンパス</string>
+    <string name="app_license">GNU GPLv3</string>
+    <string name="compass">コンパス</string>
+    <string name="tab_compass">コンパス</string>
+    <string name="permission_rationale">磁気偏角を補正して真北を表示するには、位置情報へのアクセスが必要です。</string>
+    <string name="rotation_sensor_not_available">回転ベクトルセンサーが利用できません</string>
+    <string name="magnetometer_not_available">磁力計が利用できません</string>
+    <string name="calibration_required_message">コンパスの精度は<b>%1$s</b>です。\n\n精度を上げるには、端末を8の字を描くように動かしてください。</string>
+    <string name="accuracy_unreliable">信頼できません</string>
+    <string name="accuracy_low">低</string>
+    <string name="accuracy_unknown">不明</string>
+    <string name="calibration_title">コンパスの精度</string>
+    <string name="ok_button">OK</string>
+    <string name="accuracy_medium">中</string>
+    <string name="accuracy_high">高</string>
+    <string name="compass_accuracy">精度</string>
+    <string name="compass_accuracy_accurate">正確</string>
+    <string name="compass_accuracy_needs_calibration">キャリブレーションが必要</string>
+    <string name="compass_accuracy_checking">確認中…</string>
+    <string name="compass_calibration_hint">キャリブレーションするには、メニューバーの「コンパス」ボタンを長押ししてください。</string>
+    <string name="figure_8_pattern">8の字の動き</string>
+    <string name="settings">設定</string>
+    <string name="theme">テーマ</string>
+    <string name="amoled_dark">AMOLEDダーク</string>
+    <string name="licenses">ライセンス</string>
+    <string name="sys_default">システム設定に従う</string>
+    <string name="light_theme">ライト</string>
+    <string name="dark_theme">ダーク</string>
+    <string name="choose_theme">テーマを選択</string>
+    <string name="dismiss">閉じる</string>
+    <string name="settings_about">情報</string>
+    <string name="display">表示</string>
+    <string name="location_disabled">位置情報を有効にする</string>
+    <string name="location_disabled_rationale">位置情報がオフになっています。「設定」をタップして有効にしてください。</string>
+    <string name="true_north">真北</string>
+    <string name="tn_desc">磁気偏角を補正し、コンパスが真北を指すようにします。紙の地図での利用に適しています。</string>
+    <string name="true_black_theme">純黒のテーマを使用</string>
+    <string name="permission_required">権限が必要です</string>
+    <string name="reload_location">位置情報を再取得</string>
+    <string name="magnetic_north">磁北</string>
+    <string name="elevation_value">標高 %1$s</string>
+    <string name="cancel">キャンセル</string>
+
+    <string name="tools">ツール</string>
+    <string name="level">水準器</string>
+    <string name="ruler">定規</string>
+    <string name="level_lock">ロック</string>
+    <string name="level_calibrate">キャリブレーション</string>
+    <string name="level_reset">リセット</string>
+    <string name="level_calibrate_title">水準器のキャリブレーション</string>
+    <string name="level_calibrate_message">水平だと分かっている面に端末を置き、「キャリブレーション」をタップしてください。端末の持ち方（平置き・縦・横）ごとに別々にキャリブレーションされます。</string>
+    <string name="level_calibrate_saved">キャリブレーションを保存しました</string>
+    <string name="level_calibrate_restored">キャリブレーションをリセットしました</string>
+    <string name="level_not_supported">この端末には加速度センサーがないため、水準器は利用できません。</string>
+    <string name="level_mode_flat">平面の水準器</string>
+    <string name="level_mode_horizontal">水平の水準器</string>
+    <string name="level_mode_vertical">垂直の水準器</string>
+    <string name="ruler_calibrate">定規のキャリブレーション</string>
+    <string name="ruler_calibrate_message">実物の定規を画面に当て、目盛りが合うまで調整してください。</string>
+    <string name="ruler_coarse">粗調整</string>
+    <string name="ruler_fine">微調整</string>
+
+    <string name="language">言語</string>
+    <string name="language_system">システム設定に従う</string>
+    <string name="choose_language">言語を選択</string>
+
+    <!-- Japanese writes coordinates label-first: 北緯35°41′22″ 東経139°41′30″ -->
+    <bool name="coordinates_hemisphere_first">true</bool>
+    <string-array name="coordinate_hemisphere_names">
+        <item>北緯</item>
+        <item>東経</item>
+        <item>南緯</item>
+        <item>西経</item>
+    </string-array>
+
+    <string-array name="cardinal_letters">
+        <item>北</item>
+        <item>東</item>
+        <item>南</item>
+        <item>西</item>
+    </string-array>
+    <string-array name="direction_abbreviations">
+        <item>北</item>
+        <item>北東</item>
+        <item>東</item>
+        <item>南東</item>
+        <item>南</item>
+        <item>南西</item>
+        <item>西</item>
+        <item>北西</item>
+    </string-array>
+    <string name="precision_title">測定精度</string>
+    <string name="precision_desc">水準器の測定値に小数点以下を表示し、更新をなめらかにします</string>
+    <string name="feedback">フィードバック</string>
+    <string name="haptic_title">触覚フィードバック</string>
+    <string name="choose_haptic_strength">振動の強さ</string>
+    <string name="haptic_off">オフ</string>
+    <string name="haptic_soft">弱</string>
+    <string name="haptic_default">標準</string>
+    <string name="haptic_powerful">強</string>
+    <string name="built_with_open_source">オープンソースで構築</string>
+    <string name="made_by">制作</string>
+    <string name="support_title">サポート (W.I.P.)</string>
+    <string name="support_desc">Compassの開発を支援する</string>
+</resources>

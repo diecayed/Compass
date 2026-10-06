@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- SPDX-License-Identifier: GPL-3.0-or-later-->
+
+<resources>
+    <string name="app_name">Kompas</string>
+    <string name="cancel">Annuleren</string>
+    <string name="compass">Kompas</string>
+    <string name="permission_rationale">Compass heeft toegang nodig tot de locatie van het apparaat om te controleren voor magnetische declinatie en om het ware noorden weer te geven.</string>
+    <string name="rotation_sensor_not_available">Rotatievectorsensor niet beschikbaar</string>
+    <string name="magnetometer_not_available">Magnetometer niet beschikbaar</string>
+    <string name="calibration_required_message">Kompasnauwkeurigheid is <b>%1$s</b>\n\nBeweeg het apparaat in de vorm van een acht om de nauwkeurigheid te verhogen.</string>
+    <string name="accuracy_unreliable">ONBETROUWBAAR</string>
+    <string name="accuracy_low">LAAG</string>
+    <string name="accuracy_unknown">Onbekend</string>
+    <string name="calibration_title">Nauwkeurigheid Kompas</string>
+    <string name="ok_button">OK</string>
+    <string name="accuracy_medium">GEMIDDELD</string>
+    <string name="accuracy_high">HOOG</string>
+    <string name="figure_8_pattern">Vorm van een Acht</string>
+    <string name="settings">Instellingen</string>
+    <string name="theme">Thema</string>
+    <string name="amoled_dark">Amoled Donker</string>
+    <string name="licenses">Licentie</string>
+    <string name="sys_default">Systeem Standaardwaarde</string>
+    <string name="light_theme">Licht</string>
+    <string name="dark_theme">Donker</string>
+    <string name="choose_theme">Kies Thema</string>
+    <string name="dismiss">Sluiten</string>
+    <string name="app_license">GNU GPLv3</string>
+    <string name="settings_about">Over</string>
+    <string name="display">Beeldscherm</string>
+    <string name="magnetic_north">Magnetische Noorden</string>
+    <string name="permission_required">Toestemming nodig!</string>
+    <string name="reload_location">Lokatie opnieuw laden</string>
+    <string name="location_disabled">Lokatie Aanzetten!</string>
+    <string name="location_disabled_rationale">GPS is uitgeschakeld op het apparaat. Druk op Instellingen om het aan te zetten.</string>
+    <string name="true_north">Geografische Noorden</string>
+    <string name="tn_desc">Corrigeert de magnetische declinatie zodat het kompas ware noord toont, voor gebruik met papieren kaarten.</string>
+    <string name="true_black_theme">Gebruik Echt Zwart Thema</string>
+
+    <string name="tab_compass">Kompas</string>
+    <string name="tools">Gereedschap</string>
+    <string name="level">Waterpas</string>
+    <string name="ruler">Liniaal</string>
+    <string name="level_lock">Vergrendelen</string>
+    <string name="level_calibrate">Kalibreren</string>
+    <string name="level_reset">Resetten</string>
+    <string name="level_calibrate_title">Waterpas kalibreren</string>
+    <string name="level_calibrate_message">Leg het apparaat op een oppervlak waarvan je zeker weet dat het waterpas is en tik op Kalibreren. Elke houding van het apparaat (plat, rechtop, zijwaarts) wordt apart gekalibreerd.</string>
+    <string name="level_calibrate_saved">Kalibratie opgeslagen</string>
+    <string name="level_calibrate_restored">Kalibratie hersteld</string>
+    <string name="level_not_supported">Dit apparaat heeft geen versnellingsmeter, dus de waterpas is niet beschikbaar.</string>
+    <string name="level_mode_flat">Vlakke waterpas</string>
+    <string name="level_mode_horizontal">Horizontale waterpas</string>
+    <string name="level_mode_vertical">Verticale waterpas</string>
+    <string name="ruler_calibrate">Liniaal kalibreren</string>
+    <string name="ruler_calibrate_message">Houd een echte liniaal tegen het scherm en stel in tot de streepjes overeenkomen.</string>
+    <string name="ruler_coarse">Grof</string>
+    <string name="ruler_fine">Fijn</string>
+    <string name="elevation_value">Hoogte %1$s</string>
+    <string name="compass_accuracy">Nauwkeurigheid</string>
+    <string name="compass_accuracy_accurate">Nauwkeurig</string>
+    <string name="compass_accuracy_needs_calibration">Kalibratie nodig</string>
+    <string name="compass_accuracy_checking">Controleren…</string>
+    <string name="compass_calibration_hint">Houd de Kompas-knop in de menubalk ingedrukt om te kalibreren.</string>
+    <string name="language">Taal</string>
+    <string name="language_system">Systeemstandaard</string>
+    <string name="choose_language">Kies een taal</string>
+
+    <string-array name="cardinal_letters">
+        <item>N</item>
+        <item>O</item>
+        <item>Z</item>
+        <item>W</item>
+    </string-array>
+    <string-array name="direction_abbreviations">
+        <item>N</item>
+        <item>NO</item>
+        <item>O</item>
+        <item>ZO</item>
+        <item>Z</item>
+        <item>ZW</item>
+        <item>W</item>
+        <item>NW</item>
+    </string-array>
+    <string name="precision_title">Meetnauwkeurigheid</string>
+    <string name="precision_desc">Toon decimalen bij de waterpasmetingen, met rustigere updates</string>
+    <string name="feedback">Feedback</string>
+    <string name="haptic_title">Haptische feedback</string>
+    <string name="choose_haptic_strength">Sterkte van de trilling</string>
+    <string name="haptic_off">Uit</string>
+    <string name="haptic_soft">Zacht</string>
+    <string name="haptic_default">Standaard</string>
+    <string name="haptic_powerful">Krachtig</string>
+    <string name="built_with_open_source">Gebouwd met open source</string>
+    <string name="made_by">Gemaakt door</string>
+    <string name="support_title">Steunen (W.I.P.)</string>
+    <string name="support_desc">Steun de ontwikkeling van Compass</string>
+</resources>

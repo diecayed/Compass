@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- SPDX-License-Identifier: GPL-3.0-or-later-->
+
+<resources>
+    <string name="app_name">Kompass</string>
+    <string name="compass">Kompass</string>
+    <string name="permission_rationale">Compass benötigt Zugang zum Standort, um die magnetische Deklination zu korrigieren und die Richtung des wahren Geographischen Nordpols anzuzeigen.</string>
+    <string name="rotation_sensor_not_available">Rotations-Vektor-Sensor ist nicht verfügbar</string>
+    <string name="magnetometer_not_available">Magnetometer ist nicht verfügbar</string>
+    <string name="calibration_required_message">Kompassgenauigkeit ist <b>%1$s</b>.\n\nUm die Genauigkeit zu verbessern, bewege das Gerät in einem achtförmigen Muster.</string>
+    <string name="ok_button">OK</string>
+    <string name="accuracy_medium">MITTEL</string>
+    <string name="accuracy_high">HOCH</string>
+    <string name="figure_8_pattern">Achtförmige Bewegung</string>
+    <string name="settings">Einstellungen</string>
+    <string name="theme">Thema</string>
+    <string name="amoled_dark">AMOLED Schwarz</string>
+    <string name="licenses">Lizenz</string>
+    <string name="sys_default">Systemvorgabe</string>
+    <string name="light_theme">Hell</string>
+    <string name="dark_theme">Dunkel</string>
+    <string name="choose_theme">Thema wählen</string>
+    <string name="dismiss">Ablehnen</string>
+    <string name="app_license">GNU GPLv3</string>
+    <string name="settings_about">Über</string>
+    <string name="display">Bildschirm</string>
+    <string name="location_disabled">Standort aktivieren</string>
+    <string name="location_disabled_rationale">Der Gerätestandort ist abgeschaltet. Aktiviere ihn unter Einstellungen.</string>
+    <string name="true_north">Geographisch Nord</string>
+    <string name="tn_desc">Gleicht die magnetische Deklination aus, damit der Kompass das geografische Nord anzeigt – für die Arbeit mit Papierkarten.</string>
+    <string name="true_black_theme">Benutze Reines Schwarz Thema</string>
+    <string name="permission_required">Erlaubnis notwendig</string>
+    <string name="reload_location">Standort erneut laden</string>
+    <string name="magnetic_north">Magnetisch Nord</string>
+    <string name="accuracy_unreliable">UNZUVERLÄSSIG</string>
+    <string name="accuracy_low">NIEDRIG</string>
+    <string name="accuracy_unknown">Unbekannt</string>
+    <string name="calibration_title">Kompassgenauigkeit</string>
+    <string name="cancel">Abbrechen</string>
+
+    <string name="tools">Werkzeuge</string>
+    <string name="level">Wasserwaage</string>
+    <string name="ruler">Lineal</string>
+    <string name="level_lock">Sperren</string>
+    <string name="level_calibrate">Kalibrieren</string>
+    <string name="level_reset">Zurücksetzen</string>
+    <string name="level_calibrate_title">Wasserwaage kalibrieren</string>
+    <string name="level_calibrate_message">Lege das Gerät auf eine Fläche, die nachweislich waagerecht ist, und tippe auf Kalibrieren. Jede Haltung des Geräts (flach, aufrecht, seitlich) wird separat kalibriert.</string>
+    <string name="level_calibrate_saved">Kalibrierung gespeichert</string>
+    <string name="level_calibrate_restored">Kalibrierung zurückgesetzt</string>
+    <string name="level_not_supported">Dieses Gerät hat keinen Beschleunigungssensor, daher ist die Wasserwaage nicht verfügbar.</string>
+    <string name="level_mode_flat">Flache Wasserwaage</string>
+    <string name="level_mode_horizontal">Horizontale Wasserwaage</string>
+    <string name="level_mode_vertical">Vertikale Wasserwaage</string>
+    <string name="ruler_calibrate">Lineal kalibrieren</string>
+    <string name="ruler_calibrate_message">Halte ein echtes Lineal an den Bildschirm und stelle ein, bis die Markierungen übereinstimmen.</string>
+    <string name="ruler_coarse">Grob</string>
+    <string name="ruler_fine">Fein</string>
+    <string name="elevation_value">Höhe %1$s</string>
+    <string name="compass_accuracy">Genauigkeit</string>
+    <string name="compass_accuracy_accurate">Genau</string>
+    <string name="compass_accuracy_needs_calibration">Kalibrierung nötig</string>
+    <string name="compass_accuracy_checking">Wird geprüft …</string>
+    <string name="compass_calibration_hint">Halte die Kompass-Taste in der Menüleiste gedrückt, um zu kalibrieren.</string>
+    <string name="language">Sprache</string>
+    <string name="language_system">Systemstandard</string>
+    <string name="choose_language">Sprache wählen</string>
+
+    <string-array name="cardinal_letters">
+        <item>N</item>
+        <item>O</item>
+        <item>S</item>
+        <item>W</item>
+    </string-array>
+    <string-array name="direction_abbreviations">
+        <item>N</item>
+        <item>NO</item>
+        <item>O</item>
+        <item>SO</item>
+        <item>S</item>
+        <item>SW</item>
+        <item>W</item>
+        <item>NW</item>
+    </string-array>
+
+    <string name="tab_compass">Kompass</string>
+    <string name="precision_title">Messgenauigkeit</string>
+    <string name="precision_desc">Nachkommastellen bei der Wasserwaage anzeigen, mit ruhigeren Aktualisierungen</string>
+    <string name="feedback">Rückmeldung</string>
+    <string name="haptic_title">Haptisches Feedback</string>
+    <string name="choose_haptic_strength">Stärke der Vibration</string>
+    <string name="haptic_off">Aus</string>
+    <string name="haptic_soft">Sanft</string>
+    <string name="haptic_default">Standard</string>
+    <string name="haptic_powerful">Kräftig</string>
+    <string name="built_with_open_source">Mit Open Source gebaut</string>
+    <string name="made_by">Entwickelt von</string>
+    <string name="support_title">Unterstützen (W.I.P.)</string>
+    <string name="support_desc">Die Entwicklung von Compass unterstützen</string>
+</resources>

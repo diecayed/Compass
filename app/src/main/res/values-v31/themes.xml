@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- SPDX-License-Identifier: GPL-3.0-or-later-->
+
+<resources>
+
+    <style name="Theme.App.Starting" parent="android:Theme.Material.Light.NoActionBar">
+<!--  changes the default window splash background to black on api level 31+      -->
+        <item name="android:windowSplashScreenBackground">@color/black</item>
+    </style>
+</resources>

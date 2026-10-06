@@ -1,0 +1,12 @@
+<!-- SPDX-License-Identifier: GPL-3.0-or-later-->
+
+<!-- A spirit level: a rounded body with two marks and a bubble between them -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:pathData="M4,6h16a2,2 0,0 1,2 2v8a2,2 0,0 1,-2 2H4a2,2 0,0 1,-2 -2V8a2,2 0,0 1,2 -2zM4,8v8h16V8H4zM9,9.5h1.2v5H9zM13.8,9.5H15v5h-1.2zM12,10.6a1.4,1.4 0,1 1,0 2.8a1.4,1.4 0,1 1,0 -2.8z"
+      android:fillColor="#e3e3e3"/>
+</vector>

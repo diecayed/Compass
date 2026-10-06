@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- SPDX-License-Identifier: GPL-3.0-or-later-->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Pusula</string>
+    <string name="compass">Pusula</string>
+    <string name="permission_rationale">Compass, manyetik sapmayı düzeltmek ve Gerçek Kuzey\'i görüntülemek için konum erişimine ihtiyaç duyar.</string>
+    <string name="rotation_sensor_not_available">Döner vektör sensörü mevcut değil</string>
+    <string name="magnetometer_not_available">Manyetometre mevcut değil</string>
+    <string name="calibration_required_message">Pusula doğruluğu <b>%1$s</b>.\n\nDoğruluğu arttırmak için cihazı 8 rakamı şeklinde hareket ettirin.</string>
+    <string name="accuracy_unreliable">GÜVENİLMEZ</string>
+    <string name="accuracy_low">DÜŞÜK</string>
+    <string name="accuracy_unknown">Bilinmeyen</string>
+    <string name="calibration_title">Pusula Doğruluğu</string>
+    <string name="ok_button">Tamam</string>
+    <string name="accuracy_medium">ORTA</string>
+    <string name="accuracy_high">YÜKSEK</string>
+    <string name="figure_8_pattern">8 rakamı hareketi</string>
+    <string name="settings">Ayarlar</string>
+    <string name="theme">Tema</string>
+    <string name="amoled_dark">AMOLED koyu</string>
+    <string name="licenses">Lisans</string>
+    <string name="sys_default">Sistem varsayılanı</string>
+    <string name="light_theme">Aydınlık</string>
+    <string name="dark_theme">Karanlık</string>
+    <string name="choose_theme">Tema seçin</string>
+    <string name="dismiss">İptal</string>
+    <string name="app_license">GNU Genel Kamu Lisansı v3</string>
+    <string name="settings_about">Hakkında</string>
+    <string name="display">Ekran</string>
+    <string name="location_disabled">Konumu aç</string>
+    <string name="location_disabled_rationale">Konum kapalı. Açmak için ayarlara basın.</string>
+    <string name="true_north">Gerçek Kuzey</string>
+    <string name="tn_desc">Manyetik sapmayı düzelterek pusulanın gerçek kuzeyi göstermesini sağlar; kâğıt haritalarla kullanım için.</string>
+    <string name="true_black_theme">Gerçek koyu temasını kullan</string>
+    <string name="permission_required">İzin gerekli</string>
+    <string name="reload_location">Konumu yeniden yükle</string>
+    <string name="magnetic_north">Manyetik Kuzey</string>
+    <string name="cancel">İptal</string>
+
+    <string name="tools">Araçlar</string>
+    <string name="level">Su terazisi</string>
+    <string name="ruler">Cetvel</string>
+    <string name="level_lock">Kilitle</string>
+    <string name="level_calibrate">Kalibre et</string>
+    <string name="level_reset">Sıfırla</string>
+    <string name="level_calibrate_title">Terazi kalibrasyonu</string>
+    <string name="level_calibrate_message" tools:ignore="Typos">Cihazı düz olduğunu bildiğin bir yüzeye koy ve Kalibre et\'e dokun. Cihazı tutuş biçimlerinin her biri (yatay, dik, yan) ayrı ayrı kalibre edilir.</string>
+    <string name="level_calibrate_saved">Kalibrasyon kaydedildi</string>
+    <string name="level_calibrate_restored">Kalibrasyon sıfırlandı</string>
+    <string name="level_not_supported">Bu cihazda ivmeölçer yok, bu yüzden su terazisi kullanılamıyor.</string>
+    <string name="level_mode_flat">Düz zemin terazisi</string>
+    <string name="level_mode_horizontal">Yatay terazi</string>
+    <string name="level_mode_vertical">Dikey terazi</string>
+    <string name="ruler_calibrate">Cetveli kalibre et</string>
+    <string name="ruler_calibrate_message">Ekrana gerçek bir cetvel tut ve işaretler eşleşene kadar ayarla.</string>
+    <string name="ruler_coarse">Kaba</string>
+    <string name="ruler_fine">İnce</string>
+    <string name="elevation_value">Rakım %1$s</string>
+    <string name="compass_accuracy">Doğruluk</string>
+    <string name="compass_accuracy_accurate">Doğru</string>
+    <string name="compass_accuracy_needs_calibration">Kalibrasyon gerekli</string>
+    <string name="compass_accuracy_checking">Kontrol ediliyor…</string>
+    <string name="compass_calibration_hint">Kalibre etmek için menü çubuğundaki Pusula düğmesine basılı tut.</string>
+    <string name="language">Dil</string>
+    <string name="language_system">Sistem varsayılanı</string>
+    <string name="choose_language">Dil seç</string>
+
+    <string-array name="cardinal_letters">
+        <item>K</item>
+        <item>D</item>
+        <item>G</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="direction_abbreviations">
+        <item>K</item>
+        <item>KD</item>
+        <item>D</item>
+        <item>GD</item>
+        <item>G</item>
+        <item>GB</item>
+        <item>B</item>
+        <item>KB</item>
+    </string-array>
+
+    <string name="tab_compass">Pusula</string>
+    <string name="precision_title">Ölçüm hassasiyeti</string>
+    <string name="precision_desc">Su terazisi ölçümlerinde ondalık basamakları göster, daha yumuşak güncellemelerle</string>
+    <string name="feedback">Geri bildirim</string>
+    <string name="haptic_title">Dokunsal geri bildirim</string>
+    <string name="choose_haptic_strength">Titreşim şiddeti</string>
+    <string name="haptic_off">Kapalı</string>
+    <string name="haptic_soft">Yumuşak</string>
+    <string name="haptic_default">Varsayılan</string>
+    <string name="haptic_powerful">Güçlü</string>
+    <string name="built_with_open_source">Açık kaynakla geliştirildi</string>
+    <string name="made_by">Yapan</string>
+    <string name="support_title">Destek ol (W.I.P.)</string>
+    <string name="support_desc">Compass\'ın geliştirilmesine destek ol</string>
+</resources>
