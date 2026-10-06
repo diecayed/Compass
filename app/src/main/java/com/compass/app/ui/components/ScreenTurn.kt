@@ -2,6 +2,11 @@
 
 package com.compass.app.ui.components
 
+import android.content.Context
+import android.database.ContentObserver
+import android.os.Handler
+import android.os.Looper
+import android.provider.Settings
 import android.view.OrientationEventListener
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
@@ -11,6 +16,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
@@ -29,10 +35,10 @@ class ScreenTurn(private val angleState: State<Float>, val sideways: Boolean) {
 
 /**
  * Follows how the phone is held, in quarter turns, even though the app stays in portrait. Camera
- * apps work the same way: the layout stays put and the controls turn.
+ * apps work the same way: the layout stays put and the controls turn. While [frozen] nothing turns.
  */
 @Composable
-fun rememberScreenTurn(): ScreenTurn {
+fun rememberScreenTurn(frozen: Boolean = false): ScreenTurn {
     val context = LocalContext.current
     // quarter turns the phone has been rotated clockwise, counted without wrapping so the
     // animation always takes the short way round
@@ -58,12 +64,37 @@ fun rememberScreenTurn(): ScreenTurn {
     }
 
     val angle = animateFloatAsState(
-        targetValue = -90f * turns,
+        targetValue = if (frozen) 0f else -90f * turns,
         animationSpec = tween(durationMillis = 300, easing = FastOutSlowInEasing),
         label = "screenTurn",
     )
-    val sideways = turns % 2 != 0
+    val sideways = !frozen && turns % 2 != 0
     return remember(sideways) { ScreenTurn(angle, sideways) }
 }
+
+/** True while the phone's auto-rotate setting is on, which is when its rotation lock is off. */
+@Composable
+fun rememberAutoRotateEnabled(): Boolean {
+    val context = LocalContext.current
+    var enabled by remember { mutableStateOf(isAutoRotateOn(context)) }
+
+    DisposableEffect(context) {
+        val observer = object : ContentObserver(Handler(Looper.getMainLooper())) {
+            override fun onChange(selfChange: Boolean) {
+                enabled = isAutoRotateOn(context)
+            }
+        }
+        context.contentResolver.registerContentObserver(
+            Settings.System.getUriFor(Settings.System.ACCELEROMETER_ROTATION),
+            false,
+            observer,
+        )
+        onDispose { context.contentResolver.unregisterContentObserver(observer) }
+    }
+    return enabled
+}
+
+private fun isAutoRotateOn(context: Context): Boolean =
+    Settings.System.getInt(context.contentResolver, Settings.System.ACCELEROMETER_ROTATION, 0) == 1
 
 private const val SWITCH_MARGIN_DEGREES = 30

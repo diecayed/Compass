@@ -79,6 +79,7 @@ import com.compass.app.features.settings.SettingsViewModel
 import com.compass.app.ui.components.FloatingBarMetrics
 import com.compass.app.ui.components.LocalBottomBarInset
 import com.compass.app.ui.components.ScreenTurn
+import com.compass.app.ui.components.rememberAutoRotateEnabled
 import com.compass.app.ui.components.rememberScreenTurn
 import com.compass.app.utils.Azimuth
 import com.compass.app.utils.HapticStrength
@@ -239,7 +240,7 @@ fun Compass(
     HeadingHaptics(headingDegrees = degreeIn.degrees, strength = hapticStrength)
 
     CompassLayout(
-        turn = rememberScreenTurn(),
+        turn = rememberScreenTurn(frozen = rememberAutoRotateEnabled()),
         modifier = modifier.fillMaxSize(),
         dial = {
             CompassDial(
