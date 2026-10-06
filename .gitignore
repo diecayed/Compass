@@ -17,3 +17,6 @@ Thumbs.db
 # Signing
 *.jks
 *.keystore
+
+# Release signing (kept outside the repository)
+keystore.properties
