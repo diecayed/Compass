@@ -69,6 +69,13 @@ fun formatCoordinates(
     "${dms(location.latitude, cardinalLetters[0], cardinalLetters[2], hemisphereFirst)}  " +
             dms(location.longitude, cardinalLetters[1], cardinalLetters[3], hemisphereFirst)
 
+/**
+ * Latitude and longitude as plain decimal degrees, like `41.008200, 28.978400`. Map apps read this
+ * when pasted into their search box, so it never uses the language's letters or decimal comma.
+ */
+fun formatCoordinatesForMaps(latitude: Double, longitude: Double): String =
+    String.format(Locale.ROOT, "%.6f, %.6f", latitude, longitude)
+
 /** Puts [coordinates] on the clipboard. Returns false if the system refuses. */
 fun copyCoordinates(context: Context, coordinates: String): Boolean {
     val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager

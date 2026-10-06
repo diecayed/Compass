@@ -289,7 +289,11 @@ fun Compass(
                             onLongClickLabel = copyLabel,
                             hapticFeedbackEnabled = false,
                             onLongClick = {
-                                if (copyCoordinates(context, coordinates)) {
+                                val forMaps = formatCoordinatesForMaps(
+                                    currentLocation.latitude,
+                                    currentLocation.longitude,
+                                )
+                                if (copyCoordinates(context, forMaps)) {
                                     HapticFeedbackPlayer.play(view, hapticStrength, HapticEvent.SUCCESS)
                                     // Android 13 and up shows its own "copied" message
                                     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
