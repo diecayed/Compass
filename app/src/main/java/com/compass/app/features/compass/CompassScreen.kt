@@ -240,7 +240,7 @@ fun Compass(
     HeadingHaptics(headingDegrees = degreeIn.degrees, strength = hapticStrength)
 
     CompassLayout(
-        turn = rememberScreenTurn(frozen = rememberAutoRotateEnabled()),
+        turn = rememberScreenTurn(frozen = !rememberAutoRotateEnabled()),
         modifier = modifier.fillMaxSize(),
         dial = {
             CompassDial(

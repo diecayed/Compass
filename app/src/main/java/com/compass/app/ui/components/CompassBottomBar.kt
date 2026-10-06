@@ -143,9 +143,9 @@ fun CompassBottomBar(
         label = "barHighlight",
     )
     val view = LocalView.current
-    // on the compass the bar stays put when auto-rotate is on, the level keeps turning
+    // on the compass the bar stays put when auto-rotate is off, the level keeps turning
     val onCompass = currentRoute::class == CompassRoute::class
-    val turn = rememberScreenTurn(frozen = onCompass && rememberAutoRotateEnabled())
+    val turn = rememberScreenTurn(frozen = onCompass && !rememberAutoRotateEnabled())
 
     Box(
         modifier = modifier
